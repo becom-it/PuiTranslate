@@ -1,0 +1,12 @@
+﻿@page "/edit/"
+@page "/edit/{id:int}"
+@attribute [Authorize]
+@layout MainLayout
+
+<EditComponent TranslationId="@Id" />
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+}

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuiTranslate.Client", "PuiTranslate.Client\PuiTranslate.Client.csproj", "{120EA6A6-5A7C-466A-BC9C-0C68FE9E2734}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuiTranslate.Common", "PuiTranslate.Common\PuiTranslate.Common.csproj", "{D2158C2C-A870-4171-8AA0-E7DE234D1C2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuiTranslate.Services", "PuiTranslate.Services\PuiTranslate.Services.csproj", "{10186BAC-AB2F-492D-BC94-626225F3603B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuiTranslate.Components", "PuiTranslate.Components\PuiTranslate.Components.csproj", "{AAF258E7-5DBF-4C67-BE06-A500138253B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuiTranslate.Server", "PuiTranslate.Server\PuiTranslate.Server.csproj", "{22E88974-8F69-4B1D-B297-006C54B3E3D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{120EA6A6-5A7C-466A-BC9C-0C68FE9E2734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120EA6A6-5A7C-466A-BC9C-0C68FE9E2734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120EA6A6-5A7C-466A-BC9C-0C68FE9E2734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120EA6A6-5A7C-466A-BC9C-0C68FE9E2734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2158C2C-A870-4171-8AA0-E7DE234D1C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2158C2C-A870-4171-8AA0-E7DE234D1C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2158C2C-A870-4171-8AA0-E7DE234D1C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2158C2C-A870-4171-8AA0-E7DE234D1C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10186BAC-AB2F-492D-BC94-626225F3603B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10186BAC-AB2F-492D-BC94-626225F3603B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10186BAC-AB2F-492D-BC94-626225F3603B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10186BAC-AB2F-492D-BC94-626225F3603B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF258E7-5DBF-4C67-BE06-A500138253B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF258E7-5DBF-4C67-BE06-A500138253B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF258E7-5DBF-4C67-BE06-A500138253B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF258E7-5DBF-4C67-BE06-A500138253B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E88974-8F69-4B1D-B297-006C54B3E3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E88974-8F69-4B1D-B297-006C54B3E3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E88974-8F69-4B1D-B297-006C54B3E3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E88974-8F69-4B1D-B297-006C54B3E3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C2F49F4-C0C2-46FB-848F-C427E9F3AE5A}
+	EndGlobalSection
+EndGlobal

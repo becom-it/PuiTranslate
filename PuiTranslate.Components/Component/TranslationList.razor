@@ -1,0 +1,72 @@
+﻿<div class="trans-list">
+    <div class="trans-sbox">
+        <FilterText DebounceMs="700" Label="Filtern" FilterEntered="FilterChanged" />
+    </div>
+    <div class="trans-paging">
+        <button type="button" @onclick="Prev" class="btn btn-primary" disabled="@(CurrentPage == 1 ? true : false)">Vorige</button>
+        <span>Seite @CurrentPage</span>
+        <button type="button" @onclick="Next" class="btn btn-primary">Nächste</button>
+    </div>
+    <div class="trans-result">
+        <div class="tr-table-actions">
+            <button type="button" class="btn btn-primary" @onclick="Create"><span class="oi oi-plus" aria-hidden="true"></span>Neu</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Deutsch</th>
+                    <th scope="col">Englisch</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var e in Entries)
+                {
+                    <tr class="tr-mainrow">
+                        <th scope="row">@e.Id</th>
+                        <td>@e.DescriptionDE</td>
+                        <td>@e.DescriptionEN</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" @onclick="@(() => Edit(e))" @onclick:stopPropagation>
+                                <span class="oi oi-pencil" aria-hidden="true"></span>
+                                Ändern
+                            </button>
+                        </td>
+                    </tr>
+                    @if (e.LangItems.Count() > 0)
+                    {
+                        <tr class="tab-hidden">
+                            <td colspan="3">
+                                <table class="table table-sm">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Kurz</th>
+                                            <th scope="col">Mittel</th>
+                                            <th scope="col">Lang</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var li in e.LangItems)
+                                        {
+                                            <tr>
+                                                <td>@li.Short</td>
+                                                <td>@li.Middle</td>
+                                                <td>@li.Long</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="trans-paging">
+        <button type="button" @onclick="Prev" class="btn btn-primary" disabled="@(CurrentPage == 1 ? true : false)">Vorige</button>
+        <span>Seite @CurrentPage</span>
+        <button type="button" @onclick="Next" class="btn btn-primary">Nächste</button>
+    </div>
+</div>

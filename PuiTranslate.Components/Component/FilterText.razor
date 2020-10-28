@@ -1,0 +1,37 @@
+﻿<span>@Label:</span>
+<input type="text" class="form-control" @bind-value="Data" @bind-value:event="oninput" @onkeyup="HandleKeyUp" />
+
+@code {
+
+    private System.Timers.Timer _timer;
+
+    [Parameter]
+    public int DebounceMs { get; set; } = 500;
+
+    [Parameter]
+    public string Label { get; set; }
+
+    [Parameter]
+    public EventCallback<string> FilterEntered { get; set; }
+
+    public string Data { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _timer = new System.Timers.Timer(DebounceMs);
+        _timer.Elapsed += (o, e) =>
+        {
+            InvokeAsync(async () =>
+            {
+                await FilterEntered.InvokeAsync(Data);
+            });
+        };
+        _timer.AutoReset = false;
+    }
+
+    void HandleKeyUp(KeyboardEventArgs e)
+    {
+        _timer.Stop();
+        _timer.Start();
+    }
+}

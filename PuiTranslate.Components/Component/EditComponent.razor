@@ -1,0 +1,51 @@
+﻿@*<EditForm Model="@ViewModel">
+</EditForm>*@
+
+
+<h2 class="header-text">@(TranslationId.HasValue ? "Übersetzung bearbeiten" : "Neue Übersetzung eingeben")</h2>
+
+<EditForm OnValidSubmit="@Save" Model="@ViewModel" class="edit-form">
+        <DataAnnotationsValidator />
+        <div class="ef-content">
+            <div>
+                <span>Deutscher Text</span>
+                <p>
+                    <label for="DeLong">Lang Text</label>
+                    <InputText @bind-Value="ViewModel.DeLong" class="form-control" id="DeLong" />
+                    <ValidationMessage For="@(() => ViewModel.DeLong)" />
+                </p>
+                <p>
+                    <label for="DeLong">Mittel Text</label>
+                    <InputText @bind-Value="ViewModel.DeMiddle" class="form-control" id="DeMiddle" />
+                    <ValidationMessage For="@(() => ViewModel.DeMiddle)" />
+                </p>
+                <p>
+                    <label for="DeLong">Kurz Text</label>
+                    <InputText @bind-Value="ViewModel.DeShort" class="form-control" id="DeShort" />
+                    <ValidationMessage For="@(() => ViewModel.DeShort)" />
+                </p>
+            </div>
+            <div>
+                <span>Englischer Text</span>
+                <p>
+                    <label for="EnLong">Lang Text</label>
+                    <InputText @bind-Value="ViewModel.EnLong" class="form-control" id="EnLong" />
+                    <ValidationMessage For="@(() => ViewModel.EnLong)" />
+                </p>
+                <p>
+                    <label for="EnLong">Mittel Text</label>
+                    <InputText @bind-Value="ViewModel.EnMiddle" class="form-control" id="EnMiddle" />
+                    <ValidationMessage For="@(() => ViewModel.EnMiddle)" />
+                </p>
+                <p>
+                    <label for="EnLong">Kurz Text</label>
+                    <InputText @bind-Value="ViewModel.EnShort" class="form-control" id="EnShort" />
+                    <ValidationMessage For="@(() => ViewModel.EnShort)" />
+                </p>
+            </div>
+        </div>
+        <div class="action-row">
+            <button type="submit" class="btn btn-primary">Speichern</button>
+            <button type="button" class="btn btn-danger" @onclick="Cancel">Abbrechen</button>
+        </div>
+    </EditForm>

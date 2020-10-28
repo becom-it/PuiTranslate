@@ -1,0 +1,12 @@
+﻿@using PuiTranslate.Common.Models
+
+<span>@LangItem.LangText:</span>
+@*<EditLangItemComponent Label="Lang Version" @bind-Value="LangItem.Long" />
+<EditLangItemComponent Label="Mittel Version" @bind-Value="LangItem.Middle" />
+<EditLangItemComponent Label="Kurz Version" @bind-Value="LangItem.Short" />*@
+@*<EditLangItemComponent Label="Lang Version" @bind-Value="LanguageItem.Long" />*@
+
+@code {
+    [Parameter]
+    public LanguageItem LangItem { get; set; }
+}

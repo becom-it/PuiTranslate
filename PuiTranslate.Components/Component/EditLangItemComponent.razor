@@ -1,0 +1,17 @@
+﻿@inherits EditLangItemComponentBase
+
+<div class="e-lang-item">
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <label class="form-control-label" for="@Value">@Label:</label>
+    }
+    <input class="form-control" @bind="@CurrentValue" />
+    <div class="form-control-validation">
+        <ValidationMessage For="@ValidationFor" />
+    </div>
+</div>
+
+@code {
+
+
+}

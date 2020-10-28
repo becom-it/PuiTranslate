@@ -1,0 +1,20 @@
+﻿@page "/"
+@attribute [Authorize]
+@layout MainLayout
+
+<AuthorizeView>
+    <Authorized>
+        @*<h1>Hello @context.User.Claims.Where(x => x.Type == "Benutzer").FirstOrDefault().Value !!</h1>
+
+            <ul>
+                @foreach (var c in context.User.Claims)
+                {
+                    <li>@c.Type - @c.Value</li>
+                }
+            </ul>*@
+        <TranslationList />
+    </Authorized>
+    <Authorizing>
+        <h1>Loading ...</h1>
+    </Authorizing>
+</AuthorizeView>
